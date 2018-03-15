@@ -1,6 +1,6 @@
 # Spigot Docker
 
-[![Spigot Docker](readme/title.png)](https://hub.docker.com/u/qmcgaw/spigot)
+[![Spigot Docker](https://github.com/qdm12/spigot-docker/raw/master/readme/title.png)](https://hub.docker.com/r/qmcgaw/spigot)
 
 [![Build Status](https://travis-ci.org/qdm12/spigot-docker.svg?branch=master)](https://travis-ci.org/qdm12/spigot-docker)
 
@@ -14,7 +14,7 @@ It uses 300MB of RAM and a low percentage of CPU
 
 ### Spigot MC
 
-[![Spigot](readme/spigot.png)](https://www.spigotmc.org)
+[![Spigot](https://github.com/qdm12/spigot-docker/raw/master/readme/spigot.png)](https://www.spigotmc.org)
 
 - Option 1 of 2: Create a Spigot Server from nothing
     1. Download the latest [Buildtools](https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar).
@@ -28,18 +28,12 @@ It uses 300MB of RAM and a low percentage of CPU
     
 ### Obtaining the Docker image
 
-- Option 1 of 2: Obtain from Docker Hub
-    
-    [![Docker container](readme/docker.png)](https://www.docker.com/)
-    
-    ```bash
-    sudo docker pull qmcgaw/spigot-docker
-    ```
-    
+- Option 1 of 2: Automatically download from the Docker Hub registry, go to the next section
 - Option 2 of 2: Build the image
     1. Download the repository files
     2. With a terminal, change to the directory of the repository
     3. Enter the following:
+
         ```bash
         sudo docker build -t qmcgaw/spigot ./
         ```
@@ -47,10 +41,12 @@ It uses 300MB of RAM and a low percentage of CPU
 ### Launching the Docker container from the image
 
 1. Enter the following line to test the server interactively:
+
     ```bash
-    sudo docker run -it --rm --name=spigotTEST -v '/my/path/spigot:/usr/src/spigot' -p 35565:25565 qmcgaw/spigot
+    sudo docker run -it --rm --name=spigotTEST -p 35565:25565 \
+    -v '/my/path/spigot:/usr/src/spigot' qmcgaw/spigot
     ```
-    
+
     Note that you can change `/my/path/spigot` to another path where your server files are.
     
     We bind the host port **35565** to the minecraft default server port **25565**. You can change that.
@@ -58,7 +54,8 @@ It uses 300MB of RAM and a low percentage of CPU
 2. To run the server as a daemon:
 
     ```bash
-    sudo docker run -d --name=spigot --restart=always -v '/my/path/spigot:/usr/src/spigot' -p 37050:25565 qmcgaw/spigot
+    sudo docker run -d --name=spigot --restart=always -p 37050:25565 \
+    -v '/my/path/spigot:/usr/src/spigot' qmcgaw/spigot
     ```
 
 ### Others
