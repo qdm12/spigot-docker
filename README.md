@@ -2,6 +2,8 @@
 
 [![Spigot Docker](readme/title.png)](https://hub.docker.com/u/qmcgaw/spigot)
 
+[![Build Status](https://travis-ci.org/qdm12/spigot-docker.svg?branch=master)](https://travis-ci.org/qdm12/spigot-docker)
+
 Based on:
 - Alpine Linux
 - OpenJDK JRE 8
