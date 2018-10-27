@@ -1,0 +1,14 @@
+version: '3'
+services:
+  spigot:
+    build: .
+    image: qmcgaw/spigot
+    container_name: spigot
+    volumes:
+      - ./spigot:/spigot
+    network_mode: bridge
+    ports:
+      - 25565:25565/tcp
+    environment:
+      - ACCEPT_EULA=true
+    restart: always
