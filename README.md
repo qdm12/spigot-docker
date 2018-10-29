@@ -18,9 +18,9 @@
 [![Image size](https://images.microbadger.com/badges/image/qmcgaw/spigot.svg)](https://microbadger.com/images/qmcgaw/spigot)
 [![Image version](https://images.microbadger.com/badges/version/qmcgaw/spigot.svg)](https://microbadger.com/images/qmcgaw/spigot)
 
-| Download size | Image size | RAM usage | CPU usage |
-| --- | --- | --- | --- |
-| ?MB | 132MB | 300MB | Medium |
+| Image size | RAM usage | CPU usage |
+| --- | --- | --- |
+| 130MB | 500MB | Medium |
 
 Based on:
 
@@ -35,14 +35,17 @@ Based on:
 
 ```bash
 docker run -d --name=spigot -p 25565:25565/tcp \
--v './spigot:/spigot' -e ACCEPT_EULA=true qmcgaw/spigot
+-v ./spigot:/spigot -e ACCEPT_EULA=true qmcgaw/spigot
 ```
 
 or with `docker-compose up -d` using the [docker-compose.yml](https://github.com/qdm12/spigot-docker/raw/master/docker-compose.yml) file.
 
-The environment variable `ACCEPT_EULA` is used to accept the SpigotMC EULA license (required to run the server).
-
 If you have existing server data, simply place it in `./spigot` then launch the container as described above.
+
+### Environment variables
+
+- `ACCEPT_EULA` is used to accept the SpigotMC EULA license (required to run the server)
+- `JAVA_OPTS` defaults to `-Xms512m -Xmx1800m -XX:+UseConcMarkSweepGC` and are options passed to Java to run the Spigot server
 
 ## TODOs
 
