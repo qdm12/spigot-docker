@@ -31,16 +31,22 @@ Based on:
 
 [![Spigot](https://github.com/qdm12/spigot-docker/raw/master/readme/spigot.png)](https://www.spigotmc.org)
 
-### Server launch
+Use the following command:
 
 ```bash
 docker run -d --name=spigot -p 25565:25565/tcp \
 -v ./spigot:/spigot -e ACCEPT_EULA=true qmcgaw/spigot
 ```
 
-or with `docker-compose up -d` using the [docker-compose.yml](https://github.com/qdm12/spigot-docker/raw/master/docker-compose.yml) file.
 
-If you have existing server data, simply place it in `./spigot` then launch the container as described above.
+or use [docker-compose.yml](https://github.com/qdm12/spigot-docker/blob/master/docker-compose.yml) with:
+
+
+```bash
+docker-compose up -d
+```
+
+If you have existing server data, simply place it in `./spigot` then launch the container.
 
 ### Environment variables
 
@@ -49,12 +55,13 @@ If you have existing server data, simply place it in `./spigot` then launch the 
 
 ## TODOs
 
-- Execute commands in server
-- Stop server gracefully
-- Healthcheck
-- Stop procedure
-- Plugins
+- [ ] Execute commands in server
+- [ ] Stop server gracefully
+- [ ] Healthcheck
+- [ ] Plugins
+
+## Other
 
 I recommend using the [Hibernate plugin](https://www.spigotmc.org/resources/hibernate.4441/) for your Spigot Docker server
 
-[![Hibernate plugin](readme/hibernate.png)](https://www.spigotmc.org/resources/hibernate.4441/)
+[![Hibernate plugin](https://github.com/qdm12/spigot-docker/raw/master/readme/hibernate.png)](https://www.spigotmc.org/resources/hibernate.4441/)
