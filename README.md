@@ -1,6 +1,6 @@
 # Spigot Docker
 
-*Lightweight Minecraft Spigot 1.13.2 server container*
+*Lightweight Minecraft Spigot 1.14 server container*
 
 [![Spigot Docker](https://github.com/qdm12/spigot-docker/raw/master/readme/title.png)](https://hub.docker.com/r/qmcgaw/spigot)
 
@@ -19,11 +19,11 @@
 
 | Image size | RAM usage | CPU usage |
 | --- | --- | --- |
-| 130MB | 500MB | Medium |
+| 117MB | 500MB | Medium |
 
 Based on:
 
-- Alpine Linux 3.8
+- Alpine Linux 3.9
 - OpenJDK JRE 8
 
 ## Setup
@@ -37,9 +37,7 @@ docker run -d --name=spigot -p 25565:25565/tcp \
 -v ./spigot:/spigot -e ACCEPT_EULA=true qmcgaw/spigot
 ```
 
-
 or use [docker-compose.yml](https://github.com/qdm12/spigot-docker/blob/master/docker-compose.yml) with:
-
 
 ```bash
 docker-compose up -d
