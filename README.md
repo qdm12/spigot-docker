@@ -4,7 +4,6 @@
 
 [![Spigot Docker](https://github.com/qdm12/spigot-docker/raw/master/readme/title.png)](https://hub.docker.com/r/qmcgaw/spigot)
 
-[![Build Status](https://travis-ci.org/qdm12/spigot-docker.svg?branch=master)](https://travis-ci.org/qdm12/spigot-docker)
 [![Docker Build Status](https://img.shields.io/docker/build/qmcgaw/spigot.svg)](https://hub.docker.com/r/qmcgaw/spigot)
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/qdm12/spigot-docker.svg)](https://github.com/qdm12/spigot-docker/issues)
